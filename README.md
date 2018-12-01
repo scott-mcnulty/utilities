@@ -1,3 +1,3 @@
 # utilities
 
-Repo of utilities/examples.
+Repo of utilities.
