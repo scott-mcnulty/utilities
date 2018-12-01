@@ -20,28 +20,6 @@ Other environment variables are below:
 - CX_ORACLE_EDITION_NAME
 - CX_ORACLE_EDITION_PASSWORD
 
-See the [connection_config.py](example-usage/src/connection/connection_config.py) for an example.
-
-<!-- ## Example Playbook
-
-Build the image:
-
-```sh
-docker build . -t python-oracle-connector-test
-```
-
-Run the container:
-
-```sh
-docker run -it --name python-oracle-connector-test python-oracle-connector-test:latest run.sh
-```
-
-If you're able to connect successfully you should see output like:
-
-```sh
-[(1,)]
-``` -->
-
 ## Important Links
 
 [cx-oracle Read the Docs](https://cx-oracle.readthedocs.io/en/latest/index.html)
