@@ -1,23 +1,24 @@
 # Base image
-FROM docker.io/ubuntu:16.04
+# FROM docker.io/ubuntu:16.04
+FROM python:3.6-slim
 
 # Install python3 and any other tools
-RUN apt-get update && apt-get install -y --no-install-recommends \
-	cmake curl git make python3 python3-pip python3-setuptools build-essential unzip libaio1 \
+RUN apt-get update && apt-get update && apt-get install -y --no-install-recommends \
+    unzip \
+    libaio1 \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Add source files
-COPY src /src
+# Add install files
+COPY install /tmp
 
-# Set up the Oracle client
-COPY src/connection/instantclient-basic-linux.zip /opt/oracle/instantclient-linix/
-RUN unzip /opt/oracle/instantclient-linix/instantclient-basic-linux.zip -d /opt/oracle/instantclient-linix
+# Set up the Oracle client, remove zip afterwards
+RUN mkdir -p /opt/oracle/instantclient-linix && \
+    unzip /tmp/instantclient-basic-linux.zip -d /opt/oracle/instantclient-linix && \
+    rm /tmp/instantclient-basic-linux.zip
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/oracle/instantclient-linix/instantclient_18_3
 
-WORKDIR /src
-
 # Run pip install to install python packages
-RUN pip3 install --upgrade pip -r example_requirements.txt
+RUN pip3 install --upgrade pip -r /tmp/requirements.txt
 
 # Default entrypoint
 ENTRYPOINT [ "sh" ]

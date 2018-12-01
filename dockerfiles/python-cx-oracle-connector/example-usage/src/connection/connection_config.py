@@ -11,16 +11,16 @@ DEFAULT_CONNECT_STRING = "localhost/orclpdb"
 
 # values that will be used are the default values unless environment variables
 # have been set as noted above
-MAIN_USER = os.environ.get("CX_ORACLE_SAMPLES_MAIN_USER", DEFAULT_MAIN_USER)
-MAIN_PASSWORD = os.environ.get("CX_ORACLE_SAMPLES_MAIN_PASSWORD",
+MAIN_USER = os.environ.get("CX_ORACLE_MAIN_USER", DEFAULT_MAIN_USER)
+MAIN_PASSWORD = os.environ.get("CX_ORACLE_MAIN_PASSWORD",
         DEFAULT_MAIN_PASSWORD)
-EDITION_USER = os.environ.get("CX_ORACLE_SAMPLES_EDITION_USER",
+EDITION_USER = os.environ.get("CX_ORACLE_EDITION_USER",
         DEFAULT_EDITION_USER)
-EDITION_PASSWORD = os.environ.get("CX_ORACLE_SAMPLES_EDITION_PASSWORD",
+EDITION_PASSWORD = os.environ.get("CX_ORACLE_EDITION_PASSWORD",
         DEFAULT_EDITION_PASSWORD)
-EDITION_NAME = os.environ.get("CX_ORACLE_SAMPLES_EDITION_NAME",
+EDITION_NAME = os.environ.get("CX_ORACLE_EDITION_NAME",
         DEFAULT_EDITION_NAME)
-CONNECT_STRING = os.environ.get("CX_ORACLE_SAMPLES_CONNECT_STRING",
+CONNECT_STRING = os.environ.get("CX_ORACLE_CONNECT_STRING",
         DEFAULT_CONNECT_STRING)
 
 # calculated values based on the values above

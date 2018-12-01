@@ -2,13 +2,27 @@
 
 Dockerfile that has the cx_Oracle python connector installed so any python code can connect to a specified Oracle DB.
 
-Update the username, password, and database connection values in the [connection_config.py file](src/connection/connection_config.py) or set them as environment variables using the names in the file.
+See the `example-usage` directory for example usage in a simple app to test connection.
 
-Test out your connection by using something similar to what is done in [app.py](src/app.py).
+Oracle Instant Client version (the [.zip](install/instantclient-basic-linux.zip)) is `linux.x64-18.3.0.0.0dbru`
 
-Oracle Instant Client version (the [.zip](src/connection/instantclient-basic-linux.zip)) is `linux.x64-18.3.0.0.0dbru`
+## Using the Docker image
 
-## Example Playbook
+Set the environment variables for connecting to a database:
+
+- CX_ORACLE_MAIN_USER
+- CX_ORACLE_MAIN_PASSWORD
+- CX_ORACLE_CONNECT_STRING
+
+Other environment variables are below:
+
+- CX_ORACLE_EDITION_USER
+- CX_ORACLE_EDITION_NAME
+- CX_ORACLE_EDITION_PASSWORD
+
+See the [connection_config.py](example-usage/src/connection/connection_config.py) for an example.
+
+<!-- ## Example Playbook
 
 Build the image:
 
@@ -26,7 +40,7 @@ If you're able to connect successfully you should see output like:
 
 ```sh
 [(1,)]
-```
+``` -->
 
 ## Important Links
 
