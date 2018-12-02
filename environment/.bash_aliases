@@ -15,9 +15,9 @@ alias c='clear'
 alias python='python3'
 alias pip='pip3'
 
-alias dev='cd ~/Documents/developer'
-alias devgit='cd ~/Documents/developer/git'
-alias projects='cd ~/Documents/developer/projects'
+alias dev='cd ~/developer'
+alias devgit='cd ~/developer/git'
+alias projects='cd ~/developer/projects'
 
 alias reload='. ~/.bashrc'
 
