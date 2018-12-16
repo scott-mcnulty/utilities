@@ -15,5 +15,14 @@
         "sideBar.background": "#444444",
         "editorIndentGuide.activeBackground": "#a3c5cf"
     },
-    
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.pyc": {"when": "$(basename).py"},
+        "**/__pycache__": true
+    }
 }
